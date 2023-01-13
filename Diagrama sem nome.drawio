@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-13T00:33:14.386Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="zBpzdSdQY6O0whd8whjP" version="20.8.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-13T01:01:08.720Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="fUVwqLhwN5z1phli6QE6" version="20.8.4" type="github">
   <diagram id="BwbueZTwrP3kuk7v8FJx" name="Página-1">
     <mxGraphModel dx="2016" dy="1177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="291" pageHeight="413" math="0" shadow="0">
       <root>
@@ -14,7 +14,10 @@
           <mxGeometry x="-50" y="75.5" width="160" height="110" as="geometry" />
         </mxCell>
         <mxCell id="epSY7fTq6KrpXsiW4jf5-4" value="List&amp;lt;Animais&amp;gt;pets" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;rounded=1;" parent="epSY7fTq6KrpXsiW4jf5-2" vertex="1">
-          <mxGeometry x="15" y="50" width="130" height="30" as="geometry" />
+          <mxGeometry x="15" y="65" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EgaVa4KAyTJcIK_QN-NM-4" value="int id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="epSY7fTq6KrpXsiW4jf5-2">
+          <mxGeometry x="50" y="35" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="epSY7fTq6KrpXsiW4jf5-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=13;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="epSY7fTq6KrpXsiW4jf5-7" target="epSY7fTq6KrpXsiW4jf5-34" edge="1">
           <mxGeometry relative="1" as="geometry">

@@ -2,21 +2,29 @@ Projeto PetShop
 
 nome: Petshop 947
 
-registros: 	veterinários
+Registros: 	veterinário
 	    	clientes animal (dentro da classe colocar dono)
 		tosador
 		atendente
 		
-produtos e serviços:	banho e tosa
-			atendimento clínico
-			vacinação
-			medicamentos
-			alimentos
-			serviço de transporte
+Produtos e serviços:	ResponseVO higienizar(Cliente cliente, List<Animal>animais, Higiene higiene, String observacao)
+				//retorna o id do servico, o nome dele, o valor e a classe cliente
+			
+			ResponseVO atendimentoClinico(Cliente cliente, List<Animal>animais, String Observacao)
+				// retornar resultado do atendimento no campo Observação do próprio animal 
+
+			ResponseVO vacinacao(Cliente cliente, List<Animal>animais, Vacinas vacinas, String Observacao)
+				// só pode receber uma vacina por animal
+			
+			void verRemedios();
+				//imprimir todos os remédios e preço
+			
+			void verAlimentos();
+				//imprimir produto e preço
+			
+
+Centro financeiro:	void pagamento(Lista<int>itens)
+				//imprime a nota fiscal, dar um sout no valor total da compra
 
 
-financeiro:	fluxo de compra
-		fluxo de venda
-		fluxo de pagamento
-	
-
+Main -> 

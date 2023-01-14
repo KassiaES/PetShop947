@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-14T00:14:25.596Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="NgteQhIYZsw8ajj_pc-D" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-14T00:50:58.931Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="SSgQ5BQt9z_hKwZ0TUUy" version="20.8.5" type="github">
   <diagram id="BwbueZTwrP3kuk7v8FJx" name="Página-1">
     <mxGraphModel dx="2547" dy="1177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="291" pageHeight="413" math="0" shadow="0">
       <root>
@@ -79,14 +79,14 @@
         <mxCell id="epSY7fTq6KrpXsiW4jf5-38" value="Funcionario" style="swimlane;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="75.5" width="160" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="epSY7fTq6KrpXsiW4jf5-42" value="&lt;ul&gt;&lt;li&gt;String cargo&lt;/li&gt;&lt;li&gt;BigDecimal salário&lt;/li&gt;&lt;li&gt;Date entrada&lt;/li&gt;&lt;li&gt;Date desligamento&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;rounded=1;labelBackgroundColor=none;fontSize=13;" parent="epSY7fTq6KrpXsiW4jf5-38" vertex="1">
-          <mxGeometry x="-10" y="15" width="160" height="80" as="geometry" />
+        <mxCell id="epSY7fTq6KrpXsiW4jf5-42" value="&lt;ul&gt;&lt;li&gt;int id&lt;/li&gt;&lt;li&gt;String cargo&lt;/li&gt;&lt;li&gt;BigDecimal salário&lt;/li&gt;&lt;li&gt;Date admissao&lt;/li&gt;&lt;li&gt;Date desligamento&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;rounded=1;labelBackgroundColor=none;fontSize=13;" parent="epSY7fTq6KrpXsiW4jf5-38" vertex="1">
+          <mxGeometry y="24.5" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="EgaVa4KAyTJcIK_QN-NM-1" value="Cargo" style="swimlane;whiteSpace=wrap;html=1;rounded=1;startSize=50;spacingTop=14;" parent="1" vertex="1">
           <mxGeometry x="410" y="70" width="160" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="EgaVa4KAyTJcIK_QN-NM-2" value="&lt;ul style=&quot;font-size: 13px; line-height: 130%;&quot;&gt;&lt;li&gt;VETERINARIO&lt;/li&gt;&lt;li&gt;TOSADOR&lt;/li&gt;&lt;li&gt;BANHISTA&lt;/li&gt;&lt;li&gt;RECEPCIONISTA&lt;/li&gt;&lt;li&gt;AUXILIAR_GERAL&lt;/li&gt;&lt;li&gt;ESTAGIARIO&lt;/li&gt;&lt;li&gt;MOTORISTA&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rounded=1;labelBackgroundColor=none;spacing=2;rotation=0;" parent="EgaVa4KAyTJcIK_QN-NM-1" vertex="1">
-          <mxGeometry x="-10" y="57" width="170" height="160" as="geometry" />
+        <mxCell id="EgaVa4KAyTJcIK_QN-NM-2" value="&lt;ul style=&quot;font-size: 13px; line-height: 130%;&quot;&gt;&lt;li&gt;VETERINARIO&lt;/li&gt;&lt;li&gt;TOSADOR&lt;/li&gt;&lt;li&gt;BANHISTA&lt;/li&gt;&lt;li&gt;RECEPCIONISTA&lt;/li&gt;&lt;li&gt;AUXILIAR_GERAL&lt;/li&gt;&lt;li&gt;ESTAGIARIO&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rounded=1;labelBackgroundColor=none;spacing=2;rotation=0;" parent="EgaVa4KAyTJcIK_QN-NM-1" vertex="1">
+          <mxGeometry x="-10" y="67" width="170" height="140" as="geometry" />
         </mxCell>
         <mxCell id="EgaVa4KAyTJcIK_QN-NM-3" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" parent="EgaVa4KAyTJcIK_QN-NM-1" vertex="1">
           <mxGeometry x="30" width="90" height="30" as="geometry" />
@@ -115,10 +115,13 @@
           <mxGeometry x="35" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="eqjV9MvIipvx3p0Wk4fj-22" value="PETSHOP" style="swimlane;whiteSpace=wrap;html=1;rounded=1;startSize=50;spacingTop=13;" vertex="1" parent="1">
-          <mxGeometry x="350" y="-200" width="185" height="220.5" as="geometry" />
+          <mxGeometry x="350" y="-200" width="187" height="220.5" as="geometry" />
         </mxCell>
-        <mxCell id="eqjV9MvIipvx3p0Wk4fj-26" value="String" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="395" y="-125" width="50" height="30" as="geometry" />
+        <mxCell id="eqjV9MvIipvx3p0Wk4fj-26" value="String cnpj&lt;br&gt;Endereco endereco" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="eqjV9MvIipvx3p0Wk4fj-22">
+          <mxGeometry x="27.5" y="60" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eqjV9MvIipvx3p0Wk4fj-32" value="ResponseVO higienizar&amp;nbsp;&lt;br&gt;ResponseVO atendimentoClinico&lt;br&gt;ResponseVO vacinacao" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="eqjV9MvIipvx3p0Wk4fj-22">
+          <mxGeometry y="120" width="187" height="70" as="geometry" />
         </mxCell>
         <mxCell id="eqjV9MvIipvx3p0Wk4fj-29" value="Vacinas" style="swimlane;whiteSpace=wrap;html=1;rounded=1;startSize=50;spacingTop=14;" vertex="1" parent="1">
           <mxGeometry x="-690" y="190" width="130" height="160" as="geometry" />

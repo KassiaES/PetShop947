@@ -20,8 +20,7 @@ nome: Petshop 947
 		 vacinação
 		 medicamentos
 	         alimentos
-		 serviço de transporte
-
+		 
 
 ##### financeiro:
             fluxo de compra

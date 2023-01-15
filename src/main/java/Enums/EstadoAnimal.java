@@ -1,11 +1,10 @@
 package Enums;
 
-public enum estadoAnimal {
-
+public enum EstadoAnimal {
     SUJO,
     NORMAL,
     LIMPO,
-    TOSADO,
-    LIMPO_E_TOSADO;
+    LIMPO_E_TOSADO,
+    TOSADO;
 
 }

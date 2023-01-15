@@ -1,11 +1,15 @@
-import Enums.Higiene;
+import Animais.Animal;
+import Dados.Endereco;
 
 public class PetShop {
 
-        public Animal higienizacao (Animal animal, Higiene higiene, String observacao) {
-            if (higiene.equals(Higiene.BANHO_E_TOSA)) {
+    private String cnpj;
+    private Endereco enderecoPetShop;
 
-            }
-        }
-        return animal;
+
+ //       public Animal higienizacao (Animal animal, Higiene higiene, String observacao) {
+    //        if (higiene.equals(Higiene.BANHO_E_TOSA)) {
+  //          }
+  //      }
+//        return animal;
 }

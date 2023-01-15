@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-15T20:35:53.917Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="IwePqUyJJ3_vZyf2LBFl" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-15T20:38:09.166Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="UIVHxNM-oELApj-c_FrP" version="20.8.5" type="github">
   <diagram id="BwbueZTwrP3kuk7v8FJx" name="Página-1">
     <mxGraphModel dx="2256" dy="1177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="291" pageHeight="413" math="0" shadow="0">
       <root>
@@ -161,14 +161,17 @@
         <mxCell id="bZY5Z342EeqqV9hAT-Xy-107" value="int id&lt;br&gt;&lt;br&gt;Servicos servico&lt;br&gt;&lt;br&gt;BigDecimal valor&lt;br&gt;&lt;br&gt;Cliente cliente" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="bZY5Z342EeqqV9hAT-Xy-105">
           <mxGeometry x="25" y="41" width="110" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="bZY5Z342EeqqV9hAT-Xy-108" value="ResponseVO" style="swimlane;whiteSpace=wrap;html=1;rounded=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+        <mxCell id="bZY5Z342EeqqV9hAT-Xy-108" value="&lt;br&gt;ResponseVO" style="swimlane;whiteSpace=wrap;html=1;rounded=0;fillColor=#f5f5f5;strokeColor=#666666;startSize=60;gradientColor=#b3b3b3;" vertex="1" parent="1">
           <mxGeometry x="980" y="-260" width="195" height="170" as="geometry" />
         </mxCell>
         <mxCell id="bZY5Z342EeqqV9hAT-Xy-109" value="&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rounded=1;" vertex="1" parent="bZY5Z342EeqqV9hAT-Xy-108">
           <mxGeometry y="95" width="20" height="30" as="geometry" />
         </mxCell>
         <mxCell id="bZY5Z342EeqqV9hAT-Xy-110" value="HIGIENIZAR&lt;br&gt;&lt;br&gt;ATENDIMENTO_CLINICO&lt;br&gt;&lt;br&gt;VACINACAO" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="bZY5Z342EeqqV9hAT-Xy-108">
-          <mxGeometry x="25" y="51" width="170" height="90" as="geometry" />
+          <mxGeometry x="25" y="70" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bZY5Z342EeqqV9hAT-Xy-119" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" vertex="1" parent="bZY5Z342EeqqV9hAT-Xy-108">
+          <mxGeometry x="50" width="90" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -11,20 +11,22 @@ Produtos e serviços:	ResponseVO higienizar(Cliente cliente, List<Animal>animais
 				//retorna o id do servico, o nome dele, o valor e a classe cliente
 			
 			ResponseVO atendimentoClinico(Cliente cliente, List<Animal>animais, String Observacao)
-				// retornar resultado do atendimento no campo Observação do próprio animal 
+				// retornar resultado do atendimento no campo Observação do próprio animal
+				// além do id do serviço, o nome dele, o valor e a classe cliente
 
 			ResponseVO vacinacao(Cliente cliente, List<Animal>animais, Vacinas vacinas, String Observacao)
-				// só pode receber uma vacina por animal
+				// só pode receber uma vacina por animal e 
+				// deve retornar o id do serviço, o nome dele, o valor e a classe cliente
 			
 			void verRemedios();
-				//imprimir todos os remédios e preço
-			
+				//imprimir todos os itens de remédios
+
 			void verAlimentos();
-				//imprimir produto e preço
+				//imprimir todos os itens de alimentos
 			
 
 Centro financeiro:	void pagamento(Lista<int>itens)
 				//imprime a nota fiscal, dar um sout no valor total da compra
 
 
-Main -> 
+Main -> será a classe de testes

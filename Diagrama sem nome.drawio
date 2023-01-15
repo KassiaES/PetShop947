@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-15T21:11:27.882Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="LiRh_fRyIy_tka3lnaJC" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-15T21:48:52.905Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="gF-ZMCljTKyoZN7ALYKa" version="20.8.5" type="github">
   <diagram id="BwbueZTwrP3kuk7v8FJx" name="Página-1">
     <mxGraphModel dx="2256" dy="1177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="291" pageHeight="413" math="0" shadow="0">
       <root>
@@ -172,6 +172,18 @@
         </mxCell>
         <mxCell id="bZY5Z342EeqqV9hAT-Xy-119" value="&amp;lt;&amp;lt;enum&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;" parent="bZY5Z342EeqqV9hAT-Xy-108" vertex="1">
           <mxGeometry x="50" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="y55F3KyPJM-v1la39yIW-1" value="Remedios" style="swimlane;whiteSpace=wrap;html=1;rounded=1;startSize=50;spacingTop=14;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="76" y="300" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="y55F3KyPJM-v1la39yIW-2" value="&lt;span style=&quot;font-size: 13px; background-color: initial;&quot;&gt;int id&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px; background-color: initial;&quot;&gt;String nome&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;BigDecimal preco&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rounded=1;labelBackgroundColor=none;spacing=2;rotation=0;" vertex="1" parent="y55F3KyPJM-v1la39yIW-1">
+          <mxGeometry x="10" y="60" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="y55F3KyPJM-v1la39yIW-3" value="Alimentos" style="swimlane;whiteSpace=wrap;html=1;rounded=1;startSize=50;spacingTop=14;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="230" y="300" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="y55F3KyPJM-v1la39yIW-5" value="&lt;span style=&quot;font-size: 13px; background-color: initial;&quot;&gt;int id&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px; background-color: initial;&quot;&gt;String nome&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;BigDecimal preco&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rounded=1;labelBackgroundColor=none;spacing=2;rotation=0;" vertex="1" parent="y55F3KyPJM-v1la39yIW-3">
+          <mxGeometry x="6" y="60" width="130" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

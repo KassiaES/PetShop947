@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-16T23:16:31.409Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="dD01O6-p9uujZvX9QuuG" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-16T23:31:03.663Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="x5cWM9vuzQhZut17Ztfj" version="20.8.5" type="github">
   <diagram id="BwbueZTwrP3kuk7v8FJx" name="Página-1">
     <mxGraphModel dx="2256" dy="1177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="291" pageHeight="413" math="0" shadow="0">
       <root>
@@ -185,7 +185,7 @@
         <mxCell id="y55F3KyPJM-v1la39yIW-5" value="&lt;span style=&quot;font-size: 13px; background-color: initial;&quot;&gt;int id&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px; background-color: initial;&quot;&gt;String nome&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;BigDecimal preco&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rounded=1;labelBackgroundColor=none;spacing=2;rotation=0;" parent="y55F3KyPJM-v1la39yIW-3" vertex="1">
           <mxGeometry x="6" y="60" width="130" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="rlr_leu51mhOQnvd1rXm-1" value="Servicos" style="swimlane;whiteSpace=wrap;html=1;rounded=0;fillColor=#f5f5f5;strokeColor=#666666;startSize=60;gradientColor=#b3b3b3;" vertex="1" parent="1">
+        <mxCell id="rlr_leu51mhOQnvd1rXm-1" value="&lt;br&gt;Higiene" style="swimlane;whiteSpace=wrap;html=1;rounded=0;fillColor=#f5f5f5;strokeColor=#666666;startSize=60;gradientColor=#b3b3b3;" vertex="1" parent="1">
           <mxGeometry x="950" y="-140" width="195" height="170" as="geometry" />
         </mxCell>
         <mxCell id="rlr_leu51mhOQnvd1rXm-2" value="&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rounded=1;" vertex="1" parent="rlr_leu51mhOQnvd1rXm-1">

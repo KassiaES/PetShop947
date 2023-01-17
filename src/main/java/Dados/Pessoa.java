@@ -2,11 +2,11 @@ package Dados;
 
 public class Pessoa {
 
-    protected String nome;
-    protected String cpf;
-    protected String email;
-    Endereco endereco;
-    protected String telefone;
+    private String nome;
+    private String cpf;
+    private String email;
+    private Endereco endereco;
+    private String telefone;
 
     public Pessoa(String nome, String cpf, String email, Endereco endereco, String telefone) {
         this.nome = nome;

@@ -1,10 +1,10 @@
-package Animais;
+package Models;
 
 import Enums.Vacinas;
 
 import java.util.Date;
 
-public class esquemaVacinal {
+public class EsquemaVacinal {
     Date date;
     Vacinas vacina;
     String observacao;

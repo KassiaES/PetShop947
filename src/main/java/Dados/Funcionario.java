@@ -7,11 +7,11 @@ import java.util.Date;
 
 public class Funcionario {
 
-    int id;
-    Cargo cargo;
-    BigDecimal salario;
-    Date admissao;
-    Date desligamento;
+    private int id;
+    private Cargo cargo;
+    private BigDecimal salario;
+    private Date admissao;
+    private Date desligamento;
 
     public Funcionario(int id, Cargo cargo, BigDecimal salario, Date admissao, Date desligamento) {
         this.id = id;

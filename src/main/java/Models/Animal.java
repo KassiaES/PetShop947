@@ -1,32 +1,40 @@
-package Animais;
+package Models;
 
+import Enums.EstadoAnimal;
 import Enums.Porte;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Animal {
+public abstract class  Animal{
 
-    String nome;
-    Date nascimento;
-    String raca;
-    Porte porte;
-    Double peso;
-    String observacoes;
-    List<esquemaVacinal> vacinas = new ArrayList<esquemaVacinal>();
-    // TODO fazer concatenação das informações de vacina;
+    public static EstadoAnimal estadoAnimal;
+    private String nome;
+    private Date nascimento;
+    private String raca;
+    private Porte porte;
+    private Double peso;
+    private String observacoes;
 
-    public Animal(String nome, Date nascimento, String raca, Porte porte, Double peso, String observacoes, List<esquemaVacinal> vacinas) {
+
+    public Animal(String nome, Date nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {
         this.nome = nome;
         this.nascimento = nascimento;
         this.raca = raca;
         this.porte = porte;
         this.peso = peso;
         this.observacoes = observacoes;
+        this.estadoAnimal = estadoAnimal;
         this.vacinas = vacinas;
     }
 
+    public Animal() {
+
+    }
+
+    List<EsquemaVacinal> vacinas = new ArrayList<EsquemaVacinal>();
+    // TODO fazer concatenação das informações de vacina;
     public String getNome() {
         return nome;
     }
@@ -75,11 +83,19 @@ public class Animal {
         this.observacoes = observacoes;
     }
 
-    public List<esquemaVacinal> getVacinas() {
+    public EstadoAnimal getEstadoAnimal() {
+        return estadoAnimal;
+    }
+
+    public void setEstadoAnimal(EstadoAnimal estadoAnimal) {
+        this.estadoAnimal = estadoAnimal;
+    }
+
+    public List<EsquemaVacinal> getVacinas() {
         return vacinas;
     }
 
-    public void setVacinas(List<esquemaVacinal> vacinas) {
+    public void setVacinas(List<EsquemaVacinal> vacinas) {
         this.vacinas = vacinas;
     }
 
@@ -92,6 +108,7 @@ public class Animal {
                 ", porte=" + porte +
                 ", peso=" + peso +
                 ", observacoes='" + observacoes + '\'' +
+                ", estadoAnimal=" + estadoAnimal +
                 ", vacinas=" + vacinas +
                 '}';
     }

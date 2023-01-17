@@ -2,14 +2,14 @@ package Dados;
 
 public class Endereco {
 
-    String rua;
-    String bairro;
-    String complemento;
-    int numero;
-    String cep;
-    String cidade;
-    String estado;
-    String pontoReferencial;
+    private String rua;
+    private String bairro;
+    private String complemento;
+    private int numero;
+    private String cep;
+    private String cidade;
+    private String estado;
+    private String pontoReferencial;
 
 
     public Endereco(String rua, String bairro, String complemento, int numero, String cep, String cidade, String estado, String pontoReferencial) {

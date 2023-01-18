@@ -3,22 +3,22 @@ package Models;
 import Enums.EstadoAnimal;
 import Enums.Porte;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public abstract class  Animal{
 
     public static EstadoAnimal estadoAnimal;
     private String nome;
-    private Date nascimento;
+    private DateFormat nascimento;
     private String raca;
     private Porte porte;
     private Double peso;
     private String observacoes;
 
 
-    public Animal(String nome, Date nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {
+    public Animal(String nome, DateFormat nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {
         this.nome = nome;
         this.nascimento = nascimento;
         this.raca = raca;
@@ -43,11 +43,11 @@ public abstract class  Animal{
         this.nome = nome;
     }
 
-    public Date getNascimento() {
+    public DateFormat getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(DateFormat nascimento) {
         this.nascimento = nascimento;
     }
 

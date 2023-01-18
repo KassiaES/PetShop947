@@ -2,7 +2,7 @@ package VO;
 
 import Dados.Clientes;
 import Enums.EstadoAnimal;
-
+import Enums.Servicos;
 import java.math.BigDecimal;
 
 public class ResponseVO {

@@ -16,6 +16,10 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
+    public Pessoa() {
+
+    }
+
     public String getNome() {
         return nome;
     }

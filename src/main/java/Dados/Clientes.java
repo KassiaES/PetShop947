@@ -1,28 +1,23 @@
 package Dados;
 
-import Enums.EstadoAnimal;
-import Enums.Porte;
-import Models.Animal;
-import Models.EsquemaVacinal;
 
+import Models.Animal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class Clientes  extends Animal {
+public class Clientes  extends Pessoa {
 
     private int id;
     public List<Animal> pets = new ArrayList<Animal>();
 
-    public Clientes(String nome, Date nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas, int id, List<Animal> pets) {
-        super(nome, nascimento, raca, porte, peso, observacoes, estadoAnimal, vacinas);
+    public Clientes(String nome, String cpf, String email, Endereco endereco, String telefone, int id, List<Animal> pets) {
+        super(nome, cpf, email, endereco, telefone);
         this.id = id;
         this.pets = pets;
     }
 
-    public Clientes(int id, List<Animal> pets) {
-        this.id = id;
-        this.pets = pets;
+    public Clientes(String nome, int id, List<Animal> pets) {
+        super();
     }
 
     public int getId() {
@@ -39,5 +34,13 @@ public class Clientes  extends Animal {
 
     public void setPets(List<Animal> pets) {
         this.pets = pets;
+    }
+
+    @Override
+    public String toString() {
+        return "Clientes{" +
+                "id=" + id +
+                ", pets=" + pets +
+                '}';
     }
 }

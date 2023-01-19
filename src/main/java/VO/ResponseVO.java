@@ -59,12 +59,12 @@ public class ResponseVO {
 
     @Override
     public String toString() {
-        return "ResponseVO{" +
-                "id=" + id +
-                ", servico=" + servico +
-                ", valor=" + valor +
-                ", cliente=" + cliente +
-                '}';
+        return "\n" +
+                "\n id = " + id +
+                "\n servico = " + servico +
+                "\n valor = R$" + valor +
+                "\n cliente = " + cliente +
+                "\n";
     }
 
 }

@@ -6,6 +6,7 @@ import Models.Animal;
 import Models.Cachorro;
 import Models.EsquemaVacinal;
 import Models.Gato;
+import VO.ResponseVO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,19 +23,32 @@ public class Main {
         PetShop petShop947 = new PetShop();
 
         //Crie no mínimo dois clientes, com pelo menos um deles tendo mais do que um pet
-        Animal goiaba = new Gato("Goiaba", "03/12/2020", "persa", Porte.PEQUENO, 2.5, "doente", EstadoAnimal.LIMPO, esquemaVacinalList);
-        Animal kiko = new Cachorro("Kiko","5/5/2017", "pug", Porte.PEQUENO, 2.5, "normal", EstadoAnimal.SUJO, esquemaVacinalList);
-        Animal zeus = new Cachorro("Zeus","25/12/2021", "golden", Porte.GRANDE, 5, "normal", EstadoAnimal.SUJO, esquemaVacinalList);
-        Clientes cliente1 = new Clientes("Alexandre", 3 , pets);
+        Gato goiaba = new Gato("Goiaba", "03/12/2020", "persa", Porte.PEQUENO, 2.5, "doente", EstadoAnimal.LIMPO, esquemaVacinalList);
+        Cachorro kiko = new Cachorro("Kiko","5/5/2017", "pug", Porte.PEQUENO, 2.5, "normal", EstadoAnimal.SUJO, esquemaVacinalList);
+        Cachorro zeus = new Cachorro("Zeus","25/12/2021", "golden", Porte.GRANDE, 5, "normal", EstadoAnimal.SUJO, esquemaVacinalList);
+        Clientes cliente1 = new Clientes();
+        cliente1.setNome("Alexandre");
+        cliente1.setId(3);
+        cliente1.pets.add(kiko);
+
         Clientes cliente2 = new Clientes("Luciana", 7, pets);
+        System.out.println(goiaba);
 
 
 
         //Valide se o retorno do metodo atendimentoClinico possui o id do serviço, o serviço prestado, o valor e valide principalmente, se há no campo observação do animal, o pedido do médico para a vacina
+        kiko.setObservacoes("Doente");
+        System.out.println(petShop947.atendimentoClinico(cliente1,pets, kiko.getObservacoes()));
+        ResponseVO atendimentoClinico = petShop947.atendimentoClinico(cliente1,pets,kiko.getObservacoes());
+        atendimentoClinico.toString();
+        System.out.println(cliente1.getNome());
 
 
         //Chame o metodo vacinação do pet shop, e faça o pet tomar a vacina pedido no retorno do atendimentoClinico
-
+        System.out.println(kiko.getObservacoes());
+        ResponseVO vacinacao = petShop947.vacinacao(cliente1,pets,esquemaVacinalList, kiko.getObservacoes());
+        vacinacao.toString();
+        System.out.println(cliente1.getNome());
 
 
         //Valide se o retorno do metodo vacinação possui o esquemaVacinal do pet preenchido com o vacina que foi pedida, o id, o serviço prestado e o valor

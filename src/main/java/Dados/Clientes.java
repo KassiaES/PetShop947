@@ -16,8 +16,21 @@ public class Clientes  extends Pessoa {
         this.pets = pets;
     }
 
+    @Override
+    public String toString() {
+        super.toString();
+        return "Clientes{" +
+                "id=" + id +
+                ", pets=" + pets +
+                '}';
+    }
+
     public Clientes(String nome, int id, List<Animal> pets) {
         super();
+    }
+
+    public Clientes() {
+
     }
 
     public int getId() {
@@ -36,11 +49,4 @@ public class Clientes  extends Pessoa {
         this.pets = pets;
     }
 
-    @Override
-    public String toString() {
-        return "Clientes{" +
-                "id=" + id +
-                ", pets=" + pets +
-                '}';
-    }
 }

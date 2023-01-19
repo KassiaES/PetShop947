@@ -15,7 +15,7 @@ public abstract class  Animal{
     private String raca;
     private Porte porte;
     private Double peso;
-    private String observacoes;
+    public String observacoes;
 
 
     public Animal(String nome, DateFormat nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {

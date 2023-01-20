@@ -1,14 +1,14 @@
-package Dados;
+package Models;
 
 import java.math.BigDecimal;
 
-public class Remedios {
+public class Alimentos {
 
-    private int id;
-    private String nome;
-    private BigDecimal preco;
+    int id;
+    String nome;
+    BigDecimal preco;
 
-    public Remedios(int id, String nome, BigDecimal preco) {
+    public Alimentos(int id, String nome, BigDecimal preco) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
@@ -40,7 +40,7 @@ public class Remedios {
 
     @Override
     public String toString() {
-        return "Remedios{" +
+        return "Alimentos{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +

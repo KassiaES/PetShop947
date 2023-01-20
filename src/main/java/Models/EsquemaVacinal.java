@@ -9,6 +9,10 @@ public class EsquemaVacinal {
     Vacinas vacina;
     String observacao;
 
+    public EsquemaVacinal(Vacinas vacina) {
+        this.vacina = vacina;
+    }
+
     public Date getDate() {
         return date;
     }

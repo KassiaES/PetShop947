@@ -1,6 +1,6 @@
 package VO;
 
-import Dados.Clientes;
+import Models.Clientes;
 import Enums.EstadoAnimal;
 import Enums.Servicos;
 import java.math.BigDecimal;
@@ -59,7 +59,7 @@ public class ResponseVO {
 
     @Override
     public String toString() {
-        return "\n" +
+        return "\n" + "\u001B[36m" + cliente.getNome() + "\u001B[0m" +
                 "\n id = " + id +
                 "\n servico = " + servico +
                 "\n valor = R$" + valor +

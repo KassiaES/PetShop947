@@ -2,8 +2,6 @@ package Models;
 
 import Enums.EstadoAnimal;
 import Enums.Porte;
-
-import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,14 +9,14 @@ public abstract class  Animal{
 
     public static EstadoAnimal estadoAnimal;
     private String nome;
-    private DateFormat nascimento;
+    private String nascimento;
     private String raca;
     private Porte porte;
     private Double peso;
     public String observacoes;
 
 
-    public Animal(String nome, DateFormat nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {
+    public Animal(String nome, String  nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {
         this.nome = nome;
         this.nascimento = nascimento;
         this.raca = raca;
@@ -43,11 +41,11 @@ public abstract class  Animal{
         this.nome = nome;
     }
 
-    public DateFormat getNascimento() {
+    public String  getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(DateFormat nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -102,14 +100,14 @@ public abstract class  Animal{
     @Override
     public String toString() {
         return "Animal{" +
-                "nome='" + nome + '\'' +
-                ", nascimento=" + nascimento +
-                ", raca='" + raca + '\'' +
-                ", porte=" + porte +
-                ", peso=" + peso +
-                ", observacoes='" + observacoes + '\'' +
-                ", estadoAnimal=" + estadoAnimal +
-                ", vacinas=" + vacinas +
+                "nome= " + "\u001B[31m" + nome + "\u001B[0m" +'\'' +
+                ", nascimento= " + nascimento +
+                ", raca= " + raca + '\'' +
+                ", porte= " + porte +
+                ", peso= " + peso +
+                ", observacoes= " + observacoes + '\'' +
+                ", estadoAnimal= " + estadoAnimal +
+                ", vacinas= " + vacinas +
                 '}';
     }
 }

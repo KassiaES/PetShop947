@@ -1,7 +1,5 @@
-package Dados;
+package Models;
 
-
-import Models.Animal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,19 +17,13 @@ public class Clientes  extends Pessoa {
     @Override
     public String toString() {
         super.toString();
-        return "Clientes{" +
-                "id=" + id +
-                ", pets=" + pets +
+        return "Clientes {nome= " + "\u001B[36m" + getNome() + "\u001B[0m" +
+                " id= " + id +
+                ", pets= " + pets +
                 '}';
     }
 
-    public Clientes(String nome, int id, List<Animal> pets) {
-        super();
-    }
-
-    public Clientes() {
-
-    }
+    public Clientes() {}
 
     public int getId() {
         return id;

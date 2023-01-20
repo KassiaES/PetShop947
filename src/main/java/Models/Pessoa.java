@@ -1,4 +1,4 @@
-package Dados;
+package Models;
 
 public class Pessoa {
 

@@ -105,7 +105,7 @@ public abstract class  Animal{
                 ", raca= " + raca + '\'' +
                 ", porte= " + porte +
                 ", peso= " + peso +
-                ", observacoes= " + observacoes + '\'' +
+                ", observacoes= " +  observacoes + '\'' +
                 ", estadoAnimal= " + estadoAnimal +
                 ", vacinas= " + vacinas +
                 '}';

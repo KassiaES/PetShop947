@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 
 public class Alimentos {
 
-    int id;
-    String nome;
-    BigDecimal preco;
+    private int id;
+    private String nome;
+    private BigDecimal preco;
 
     public Alimentos(int id, String nome, BigDecimal preco) {
         this.id = id;

@@ -44,6 +44,6 @@ public class Remedios {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco +
-                '}';
+                '}' ;
     }
 }

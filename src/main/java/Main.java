@@ -1,5 +1,4 @@
 import Enums.Higiene;
-import Enums.Servicos;
 import Models.*;
 import Enums.EstadoAnimal;
 import Enums.Porte;
@@ -118,6 +117,10 @@ public class Main {
          * ( a lista de todos os ids do serviços utilizados mais pelo menos 2 remédio e 2 alimento e valide se a soma dos valores do pedido do cliente está correta )
          *  lembre se que se foi enviado dois animais para qualquer serviço, o valor será o dobro do serviço feito apenas para um animal*/
         PetShop.pagamentos(idList2);
+
+        // conferir se já tomou esta vacina
+        // randomico para a vacina
+        // localDate arrumar
 
 
     }

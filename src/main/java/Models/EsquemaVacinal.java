@@ -36,4 +36,13 @@ public class EsquemaVacinal {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
+
+    @Override
+    public String toString() {
+        return "EsquemaVacinal{" +
+                "date=" + date +
+                ", vacina=" + vacina +
+                ", observacao='" + observacao + '\'' +
+                '}';
+    }
 }

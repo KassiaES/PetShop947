@@ -2,6 +2,8 @@ package Models;
 
 import Enums.EstadoAnimal;
 import Enums.Porte;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,14 +11,14 @@ public abstract class  Animal{
 
     public static EstadoAnimal estadoAnimal;
     private String nome;
-    private String nascimento;
+    private LocalDate nascimento;
     private String raca;
     private Porte porte;
     private Double peso;
     public String observacoes;
 
 
-    public Animal(String nome, String  nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {
+    public Animal(String nome, LocalDate nascimento, String raca, Porte porte, Double peso, String observacoes, EstadoAnimal estadoAnimal, List<EsquemaVacinal> vacinas) {
         this.nome = nome;
         this.nascimento = nascimento;
         this.raca = raca;
@@ -41,11 +43,11 @@ public abstract class  Animal{
         this.nome = nome;
     }
 
-    public String  getNascimento() {
+    public LocalDate getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(String nascimento) {
+    public void setNascimento(LocalDate nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -104,7 +106,7 @@ public abstract class  Animal{
                 ", nascimento= " + nascimento +
                 ", raca= " + raca + '\'' +
                 ", porte= " + porte +
-                ", peso= " + peso +
+                ", peso(Kg)= " + peso +
                 ", observacoes= " +  observacoes + '\'' +
                 ", estadoAnimal= " + estadoAnimal +
                 ", vacinas= " + vacinas +

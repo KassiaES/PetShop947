@@ -1,23 +1,24 @@
 package Models;
 
 import Enums.Vacinas;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 public class EsquemaVacinal {
-    Date date;
+    LocalDate date;
     Vacinas vacina;
     String observacao;
 
-    public EsquemaVacinal(Vacinas vacina) {
+    public EsquemaVacinal(LocalDate date, Vacinas vacina, String observacao) {
+        this.date = date;
         this.vacina = vacina;
+        this.observacao = observacao;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

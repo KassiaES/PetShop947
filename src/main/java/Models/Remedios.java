@@ -43,7 +43,7 @@ public class Remedios {
         return "Remedios{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", preco=" + preco +
-                '}' ;
+                ", preco= R$ " + preco +
+                '}';
     }
 }

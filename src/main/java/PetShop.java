@@ -6,11 +6,7 @@ import Enums.Servicos;
 import VO.ResponseVO;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class PetShop {
     final int ATENDIMENTO = 1;
@@ -21,76 +17,142 @@ public class PetShop {
     static List<Remedios> remediosList = criarListaRemedios();
     static List<Alimentos> alimentosList = criarListaAlimentos();
     public ResponseVO atendimentoClinico(Clientes cliente, List<Animal> animais, String observacao) {
-        //ciclo para mais de 1 animal
+
         ResponseVO response = new ResponseVO();
+        Random gerarVacina = new Random();
+        BigDecimal valorConsulta = BigDecimal.ZERO;
+
         response.setId(ATENDIMENTO);
         response.setCliente(cliente);
         response.setServico(Servicos.ATENDIMENTO_CLINICO);
-        response.setValor(BigDecimal.valueOf(120));
+
         for (int i=0; i < animais.size(); i++) {
+
+            valorConsulta = valorConsulta.add(BigDecimal.valueOf(120));
+
             Animal obs =  (Animal) animais.get(i);
-            obs.setObservacoes(String.valueOf(Vacinas.values()[i]));
+            boolean again = false;
+            //validação para não aplicar vacina repetida
+            do {
+                int indexVacina = gerarVacina.nextInt(5);
+                if (obs.getObservacoes() != String.valueOf(Vacinas.values()[indexVacina])) {
+                    obs.setObservacoes(String.valueOf(Vacinas.values()[indexVacina]));
+                } else again = true;
+
+            } while (again = false);
+
         }
+        response.setValor(valorConsulta);
         return response;
     }
 
     public ResponseVO vacinacao(Clientes cliente, List<Animal> animais, List<EsquemaVacinal> esquemaVacinalList, String observacao) {
-        //ciclo para mais de 1 animal
+
         ResponseVO response = new ResponseVO();
         response.setId(VACINAR);
         response.setCliente(cliente);
         response.setServico(Servicos.VACINACAO);
-        response.setValor(BigDecimal.valueOf(90));
-        // somar na lista, não só gravar
+
+        BigDecimal valorConsulta = BigDecimal.ZERO;
+
         for (int j=0; j < animais.size(); j++) {
-            esquemaVacinalList.add(new EsquemaVacinal(Vacinas.values()[j]));
+
+            valorConsulta = valorConsulta.add(BigDecimal.valueOf(90));
+
             Animal obs =  (Animal) animais.get(j);
-            obs.setObservacoes("Vacinado");
-            //vac.setDate();
+            // passa a observacao de String para Enum e gera o EsquemaVacinal
+            esquemaVacinalList.add(new EsquemaVacinal(LocalDate.now(),Vacinas.valueOf(obs.getObservacoes()), "Vacinado"));
+            obs.setObservacoes("Atendido em " + LocalDate.now());
         }
+        response.setValor(valorConsulta);
         return response;
     }
 
     public ResponseVO higienizar(Clientes cliente, List<Animal> animais, Higiene higiene, String observacao) {
+
         ResponseVO response = new ResponseVO();
         response.setId(HIGIENIZAR);
         response.setCliente(cliente);
         response.setServico(Servicos.HIGIENIZAR);
-        for (int i=0; i < animais.size(); i++) {
-            Animal estadoAnimal =  (Animal) animais.get(i);
-            if (higiene == Higiene.BANHO) {
-                estadoAnimal.setEstadoAnimal(EstadoAnimal.LIMPO);
-                response.setValor(BigDecimal.valueOf(60));
-            } else  {
-                estadoAnimal.setEstadoAnimal(EstadoAnimal.LIMPO_E_TOSADO);
-                response.setValor(BigDecimal.valueOf(90));
-            }
+
+        BigDecimal valorConsulta = BigDecimal.ZERO;
+
+        for (int k=0; k < animais.size(); k++) {
+
+            Animal estadoAnimal =  (Animal) animais.get(k);
+            estadoAnimal.setEstadoAnimal(EstadoAnimal.LIMPO_E_TOSADO);
+
+            valorConsulta = valorConsulta.add(BigDecimal.valueOf(60));
+
         }
+        response.setValor(valorConsulta);
         return response;
     }
 
-    static void verRemedios() {
+    public static void verRemedios() {
         remediosList.forEach(remedio -> System.out.println(remedio));
     }
     public static List<Remedios> criarListaRemedios() {
-        Remedios remedio1 = new Remedios(1, "Bravecto", new BigDecimal(45));
-        Remedios remedio2 = new Remedios(2, "NexGard", new BigDecimal(55));
+        Remedios remedio1 = new Remedios(31, "Bravecto", new BigDecimal(45.50));
+        Remedios remedio2 = new Remedios(32, "NexGard", new BigDecimal(55.75));
+        Remedios remedio3 = new Remedios(33, "Frontline", new BigDecimal(50.25));
         return Arrays.asList(remedio1,remedio2);
     }
 
-   static void verAlimentos() {
+   public static void verAlimentos() {
         alimentosList.forEach(alimento -> System.out.println(alimento));
    }
     public static List<Alimentos> criarListaAlimentos() {
-        Alimentos alimento1 = new Alimentos(1, "Petisco Wow", new BigDecimal(25));
-        Alimentos alimento2 = new Alimentos(2, "Ração Premium Nutrilus", new BigDecimal(35));
+        Alimentos alimento1 = new Alimentos(71, "Petisco Wow", new BigDecimal(25.50));
+        Alimentos alimento2 = new Alimentos(72, "Ração Premium Nutrilus", new BigDecimal(35.50));
+        Alimentos alimento3 = new Alimentos(73, "Ração Purina", new BigDecimal(40.99));
         return Arrays.asList(alimento1, alimento2);
     }
 
     static void pagamentos(List<Integer> itens) {
-        double total = 1;
-        //total +=;
-        System.out.println("O total é: " + total + "\n");
+        double total = 0;
+        System.out.println("\n\n CUPOM FISCAL");
+        for (int item:itens) {
+            switch (item) {
+                case 1:
+                    total+= 120;
+                    System.out.println(Servicos.ATENDIMENTO_CLINICO + " R$ 120.00"  );
+                    break;
+                case 2:
+                    total+= 90;
+                    System.out.println(Servicos.VACINACAO + " R$ 90.00"  );
+                    break;
+                case 3:
+                    total+= 60;
+                    System.out.println(Servicos.HIGIENIZAR + " R$ 60.00"  );
+                    break;
+                case 31:
+                    System.out.println(remediosList.get(0));
+                    total+= 45.50;
+                    break;
+                case 32:
+                    System.out.println(remediosList.get(1));
+                    total+= 55.75;
+                    break;
+                case 33:
+                    System.out.println(remediosList.get(2));
+                    total+= 50.25;
+                    break;
+                case 71:
+                    System.out.println(alimentosList.get(0));
+                    total+= 25.45;
+                    break;
+                case 72:
+                    System.out.println(alimentosList.get(1));
+                    total+= 35.50;
+                    break;
+                case 73:
+                    System.out.println(alimentosList.get(2));
+                    total+= 40.99;
+                    break;
+            }
+        }
+        System.out.println("\nO total é \u001B[36m R$ " + total + "\u001B[0m\n");
     }
 
     public String getCnpj() {

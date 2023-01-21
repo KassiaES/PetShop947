@@ -43,7 +43,7 @@ public class Alimentos {
         return "Alimentos{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", preco=" + preco +
+                ", preco = R$ " + preco +
                 '}';
     }
 }

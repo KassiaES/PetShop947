@@ -8,6 +8,8 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
 
+import static Enums.EstadoAnimal.SUJO;
+
 public class PetShop {
     final int ATENDIMENTO = 1;
     final int VACINAR = 2;
@@ -26,21 +28,25 @@ public class PetShop {
         response.setCliente(cliente);
         response.setServico(Servicos.ATENDIMENTO_CLINICO);
 
+        //validação para não aplicar vacina repetida
+        int indexVacina = -1;
+        int indexVacinaAtual = -2;
         for (int i=0; i < animais.size(); i++) {
 
             valorConsulta = valorConsulta.add(BigDecimal.valueOf(120));
 
             Animal obs =  (Animal) animais.get(i);
             boolean again = false;
-            //validação para não aplicar vacina repetida
+
             do {
-                int indexVacina = gerarVacina.nextInt(5);
-                if (obs.getObservacoes() != String.valueOf(Vacinas.values()[indexVacina])) {
-                    obs.setObservacoes(String.valueOf(Vacinas.values()[indexVacina]));
-                } else again = true;
-
+                indexVacinaAtual = gerarVacina.nextInt(5);
+                if (indexVacina != indexVacinaAtual) {
+                    if (obs.getObservacoes() != String.valueOf(Vacinas.values()[indexVacinaAtual])) {
+                        obs.setObservacoes(String.valueOf(Vacinas.values()[indexVacinaAtual]));
+                    } else again = true;
+                }
             } while (again = false);
-
+            indexVacina = indexVacinaAtual;
         }
         response.setValor(valorConsulta);
         return response;
@@ -86,6 +92,7 @@ public class PetShop {
 
         }
         response.setValor(valorConsulta);
+
         return response;
     }
 
@@ -96,7 +103,7 @@ public class PetShop {
         Remedios remedio1 = new Remedios(31, "Bravecto", new BigDecimal(45.50));
         Remedios remedio2 = new Remedios(32, "NexGard", new BigDecimal(55.75));
         Remedios remedio3 = new Remedios(33, "Frontline", new BigDecimal(50.25));
-        return Arrays.asList(remedio1,remedio2);
+        return Arrays.asList(remedio1,remedio2,remedio3);
     }
 
    public static void verAlimentos() {
@@ -105,8 +112,8 @@ public class PetShop {
     public static List<Alimentos> criarListaAlimentos() {
         Alimentos alimento1 = new Alimentos(71, "Petisco Wow", new BigDecimal(25.50));
         Alimentos alimento2 = new Alimentos(72, "Ração Premium Nutrilus", new BigDecimal(35.50));
-        Alimentos alimento3 = new Alimentos(73, "Ração Purina", new BigDecimal(40.99));
-        return Arrays.asList(alimento1, alimento2);
+        Alimentos alimento3 = new Alimentos(73, "Ração Purina", new BigDecimal(40.75));
+        return Arrays.asList(alimento1, alimento2,alimento3);
     }
 
     static void pagamentos(List<Integer> itens) {

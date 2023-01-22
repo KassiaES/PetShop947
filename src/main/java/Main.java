@@ -15,9 +15,9 @@ public class Main {
         PetShop petShop947 = new PetShop();
 
         List<EsquemaVacinal> esquemaVacinalList = new ArrayList<EsquemaVacinal>();
-        List<Animal> pets = new ArrayList<Animal>();
+        List<EsquemaVacinal> esquemaVacinalList2 = new ArrayList<EsquemaVacinal>();
 
-        /**Crie no mínimo dois clientes, com pelo menos um deles tendo mais do que um pet */
+        //**Crie no mínimo dois clientes, com pelo menos um deles tendo mais do que um pet */
         // primeiro pet
         Cachorro zeus = new Cachorro("Zeus","2022-01-20", "golden", Porte.GRANDE, 5, "normal", EstadoAnimal.SUJO, esquemaVacinalList);
         zeus.setNome("Zeus");
@@ -44,7 +44,7 @@ public class Main {
         kiko.setPeso(3.5);
         kiko.setObservacoes("DOENTE - com infecção na urina");
         kiko.setEstadoAnimal(EstadoAnimal.SUJO);
-        kiko.setVacinas(esquemaVacinalList);
+        kiko.setVacinas(esquemaVacinalList2);
 
         //terceiro pet
         Gato goiaba = new Gato("Goiaba", "2020-12-03", "persa", Porte.PEQUENO, 2.5, "doente", EstadoAnimal.LIMPO, esquemaVacinalList);
@@ -54,8 +54,8 @@ public class Main {
         goiaba.setPorte(Porte.PEQUENO);
         goiaba.setPeso(2.5);
         goiaba.setObservacoes("DOENTE");
-        goiaba.setEstadoAnimal(EstadoAnimal.LIMPO);
-        goiaba.setVacinas(esquemaVacinalList);
+        goiaba.setEstadoAnimal(EstadoAnimal.SUJO);
+        goiaba.setVacinas(esquemaVacinalList2);
 
         //segundo cliente
         Clientes cliente2 = new Clientes();
@@ -67,64 +67,90 @@ public class Main {
         //lista dos ids de todos os produtos e serviços do cliente 1
         List<Integer> idList1 = new ArrayList<>();
 
-        /**Chame o metodo atendimentoClinico do petshop, e faça-o retornar no campo observações o pedido do médico para o pet tomar a vacina_X*/
+        ///*Chame o metodo atendimentoClinico do petshop, e faça-o retornar no campo observações o pedido do médico para o pet tomar a vacina_X
+        // Valide se o retorno do metodo atendimentoClinico possui o id do serviço, o serviço prestado,
+        // o valor e valide principalmente, se há no campo observação do animal, o pedido do médico para a vacina*/
+
         ResponseVO atendimentoClinico = petShop947.atendimentoClinico(cliente1, cliente1.pets, cliente1.pets.get(0).getObservacoes());
         // metodo para colocar o numero de ids de procedimentos iguais ao número de animais, ex. 2 pets, adiciona 2 ids
         for (Animal pet: cliente1.pets) {
               idList1.add(atendimentoClinico.getId());
         }
 
-        /**Valide se o retorno do metodo atendimentoClinico possui o id do serviço, o serviço prestado, o valor e valide principalmente, se há no campo observação do animal, o pedido do médico para a vacina*/
+        //**Valide se o retorno do metodo atendimentoClinico possui o id do serviço, o serviço prestado, o valor e
+        // valide principalmente, se há no campo observação do animal, o pedido do médico para a vacina*/
         System.out.println(atendimentoClinico);
 
-        /**Chame o metodo vacinação do pet shop, e faça o pet tomar a vacina pedido no retorno do atendimentoClinico*/
-        ResponseVO vacinacao = petShop947.vacinacao(cliente1, cliente1.pets, zeus.getVacinas(), zeus.getObservacoes());
+        //**Chame o metodo vacinação do pet shop, e faça o pet tomar a vacina pedido no retorno do atendimentoClinico*/
+        ResponseVO vacinacao = petShop947.vacinacao(cliente1, cliente1.pets, cliente1.pets.get(0).getVacinas(),cliente1.pets.get(0).getObservacoes());
         for (Animal pet: cliente1.pets) {
             idList1.add(vacinacao.getId());
         }
 
-         /**Valide se o retorno do metodo vacinação possui o esquemaVacinal do pet preenchido com o vacina que foi pedida, o id, o serviço prestado e o valor */
+         //**Valide se o retorno do metodo vacinação possui o esquemaVacinal do pet preenchido com o vacina que foi pedida, o id, o serviço prestado e o valor */
          System.out.println(vacinacao);
 
-        /**Chame o metodo higienizar do petshop, e faça-o retornar no campo estado do animal, um valor referente ao serviço prestado ex: se chamou o metodo apenas pedindo para dar banho, o animal deverá estar limpo no retorno do metodo*/
-        ResponseVO higienizar = petShop947.higienizar(cliente1, cliente1.pets, Higiene.BANHO_E_TOSA,zeus.getObservacoes());
+        //**Chame o metodo higienizar do petshop, e faça-o retornar no campo estado do animal, um valor referente ao serviço prestado
+        // ex: se chamou o metodo apenas pedindo para dar banho, o animal deverá estar limpo no retorno do metodo*/
+        ResponseVO higienizar = petShop947.higienizar(cliente1, cliente1.pets, Higiene.BANHO_E_TOSA,cliente1.pets.get(0).getObservacoes());
         for (Animal pet: cliente1.pets) {
             idList1.add(higienizar.getId());
         }
 
-        /**Valide se o retorno do metodo higienizar possui id, serviço, preço e se o estado do animal está equivalente ao serviço pedido*/
+        //**Valide se o retorno do metodo higienizar possui id, serviço, preço e se o estado do animal está equivalente ao serviço pedido*/
         System.out.println(higienizar);
 
-        /**Chame os métodos verRemedio e verAlimentos*/
+        //**Chame os métodos verRemedio e verAlimentos*/
         PetShop.verRemedios();
         idList1.add(PetShop.remediosList.get(1).getId());
 
         PetShop.verAlimentos();
         idList1.add(PetShop.alimentosList.get(0).getId());
 
-        /**Por último, passe para o metodo pagamentos, a lista de todos os ids do serviços utilizados mais pelo menos 1 remédio e 1 alimento e valide se a soma dos valores do pedido do cliente está correta*/
+        //**Por último, passe para o metodo pagamentos, a lista de todos os ids do serviços utilizados mais pelo menos 1 remédio e 1 alimento
+        // *  e valide se a soma dos valores do pedido do cliente está correta*/
         PetShop.pagamentos(idList1);
 
         //lista dos ids de todos os produtos e serviços do cliente 2
         List<Integer> idList2 = new ArrayList<>();
 
-        /**Repita o todos os fluxos feitos para o cliente com apenas um pet para o que tenha dois, fazendo a seguinte alterações:
-         * no metodo atendimentoClinico coloque uma observação diferente para cada animal do cliente (cada animal do cliente deve receber uma vacina diferente para esse caso de testes)*/
+        ///**Repita o todos os fluxos feitos para o cliente com apenas um pet para o que tenha dois, fazendo a seguinte alterações:
+        // * no metodo atendimentoClinico coloque uma observação diferente para cada animal do cliente (cada animal do cliente deve receber uma vacina diferente para esse caso de testes)*/
+        //* No metodo vacinação, vc deve vacinar cada animal conforme pedido no atendimentoClinico e deve checar no retorno o esquemaVacinal de cada animal e constatar a vacina correta em cada um
 
-        /**
-         * No metodo vacinação, vc deve vacinar cada animal conforme pedido no atendimentoClinico e deve checar no retorno o esquemaVacinal de cada animal e constatar a vacina correta em cada um
-         */
 
-        /**Chame os métodos verRemedio e verAlimentos*/
+
+
+
+        //goiaba.setEstadoAnimal(EstadoAnimal.SUJO);
+
+         atendimentoClinico = petShop947.atendimentoClinico(cliente2, cliente2.pets, cliente2.pets.get(1).getObservacoes());
+          for (Animal pet: cliente2.pets) {
+            idList2.add(atendimentoClinico.getId());
+          }
+          System.out.println(atendimentoClinico);
+          vacinacao = petShop947.vacinacao(cliente2, cliente2.pets, cliente2.pets.get(0).getVacinas(),cliente2.pets.get(1).getObservacoes());
+          for (Animal pet: cliente2.pets) {
+            idList2.add(vacinacao.getId());
+          }
+         System.out.println(vacinacao);
+         higienizar = petShop947.higienizar(cliente2, cliente2.pets, Higiene.BANHO_E_TOSA,cliente2.pets.get(1).getObservacoes());
+          for (Animal pet: cliente2.pets) {
+            idList2.add(higienizar.getId());
+          }
+         System.out.println(higienizar);
+
         PetShop.verRemedios();
-        //idList2.add();
+        idList2.add(PetShop.remediosList.get(0).getId());
+        idList2.add(PetShop.remediosList.get(2).getId());
         PetShop.verAlimentos();
-        //idList2.add();
+        idList2.add(PetShop.alimentosList.get(1).getId());
+        idList2.add(PetShop.alimentosList.get(2).getId());
 
-        /** Por último, faça a mesma validação para o metodo pagamentos
-         * ( a lista de todos os ids do serviços utilizados mais pelo menos 2 remédio e 2 alimento e valide se a soma dos valores do pedido do cliente está correta )
-         *  lembre se que se foi enviado dois animais para qualquer serviço, o valor será o dobro do serviço feito apenas para um animal*/
-        PetShop.pagamentos(idList2);
+         // /** Por último, faça a mesma validação para o metodo pagamentos
+         // * ( a lista de todos os ids do serviços utilizados mais pelo menos 2 remédio e 2 alimento e valide se a soma dos valores do pedido do cliente está correta )
+         //  *  lembre se que se foi enviado dois animais para qualquer serviço, o valor será o dobro do serviço feito apenas para um animal*/
+         PetShop.pagamentos(idList2);
 
 
     }

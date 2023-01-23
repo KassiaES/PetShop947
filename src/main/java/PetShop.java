@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
 
-import static Enums.EstadoAnimal.SUJO;
-
 public class PetShop {
     final int ATENDIMENTO = 1;
     final int VACINAR = 2;
@@ -52,7 +50,7 @@ public class PetShop {
         return response;
     }
 
-    public ResponseVO vacinacao(Clientes cliente, List<Animal> animais, List<EsquemaVacinal> esquemaVacinalList, String observacao) {
+    public ResponseVO vacinacao(Clientes cliente, List<Animal> animais, List<Vacinas> vacinas, String observacao) {
 
         ResponseVO response = new ResponseVO();
         response.setId(VACINAR);
@@ -60,15 +58,16 @@ public class PetShop {
         response.setServico(Servicos.VACINACAO);
 
         BigDecimal valorConsulta = BigDecimal.ZERO;
+        valorConsulta = valorConsulta.add(BigDecimal.valueOf(90));
 
-        for (int j=0; j < animais.size(); j++) {
 
-            valorConsulta = valorConsulta.add(BigDecimal.valueOf(90));
-
-            Animal obs =  (Animal) animais.get(j);
+        for (Animal animal:animais) {
             // passa a observacao de String para Enum e gera o EsquemaVacinal
-            esquemaVacinalList.add(new EsquemaVacinal(LocalDate.now(),Vacinas.valueOf(obs.getObservacoes()), "Vacinado"));
-            obs.setObservacoes("Atendido em " + LocalDate.now());
+
+            EsquemaVacinal esquemaVacinal = (new EsquemaVacinal(LocalDate.now(),Vacinas.valueOf(animal.getObservacoes()), "Vacinado"));
+            animal.getVacinas().add(esquemaVacinal);
+            animal.setObservacoes("Atendido em " + LocalDate.now());
+
         }
         response.setValor(valorConsulta);
         return response;

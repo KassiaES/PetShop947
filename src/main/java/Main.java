@@ -1,4 +1,5 @@
 import Enums.Higiene;
+import Enums.Vacinas;
 import Models.*;
 import Enums.EstadoAnimal;
 import Enums.Porte;
@@ -82,7 +83,9 @@ public class Main {
         System.out.println(atendimentoClinico);
 
         //**Chame o metodo vacinação do pet shop, e faça o pet tomar a vacina pedido no retorno do atendimentoClinico*/
-        ResponseVO vacinacao = petShop947.vacinacao(cliente1, cliente1.pets, cliente1.pets.get(0).getVacinas(),cliente1.pets.get(0).getObservacoes());
+        List<Vacinas> vacina1 = new ArrayList<>();
+
+        ResponseVO vacinacao = petShop947.vacinacao(cliente1, cliente1.pets, vacina1 ,cliente1.pets.get(0).getObservacoes());
         for (Animal pet: cliente1.pets) {
             idList1.add(vacinacao.getId());
         }
@@ -119,21 +122,25 @@ public class Main {
         //* No metodo vacinação, vc deve vacinar cada animal conforme pedido no atendimentoClinico e deve checar no retorno o esquemaVacinal de cada animal e constatar a vacina correta em cada um
 
 
-
-
-
-        //goiaba.setEstadoAnimal(EstadoAnimal.SUJO);
+        kiko.setEstadoAnimal(EstadoAnimal.SUJO);
+        goiaba.setEstadoAnimal(EstadoAnimal.SUJO);
+        List<Vacinas> vacina2 = new ArrayList<>();
 
          atendimentoClinico = petShop947.atendimentoClinico(cliente2, cliente2.pets, cliente2.pets.get(1).getObservacoes());
           for (Animal pet: cliente2.pets) {
+
             idList2.add(atendimentoClinico.getId());
           }
           System.out.println(atendimentoClinico);
-          vacinacao = petShop947.vacinacao(cliente2, cliente2.pets, cliente2.pets.get(0).getVacinas(),cliente2.pets.get(1).getObservacoes());
+
+
+          vacinacao = petShop947.vacinacao(cliente2, cliente2.pets, vacina2 ,cliente2.pets.get(1).getObservacoes());
           for (Animal pet: cliente2.pets) {
             idList2.add(vacinacao.getId());
           }
          System.out.println(vacinacao);
+
+
          higienizar = petShop947.higienizar(cliente2, cliente2.pets, Higiene.BANHO_E_TOSA,cliente2.pets.get(1).getObservacoes());
           for (Animal pet: cliente2.pets) {
             idList2.add(higienizar.getId());

@@ -34,7 +34,8 @@ public abstract class  Animal{
     }
 
     List<EsquemaVacinal> vacinas = new ArrayList<EsquemaVacinal>();
-    // TODO fazer concatenação das informações de vacina;
+
+
     public String getNome() {
         return nome;
     }
